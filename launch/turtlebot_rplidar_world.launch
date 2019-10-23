@@ -11,7 +11,7 @@
     <arg name="world_name" value="$(arg world_file)"/>
   </include>
   
-  <include file="$(find turtlebot_rplidar)/launch/kobuki_rplidar.launch.xml"/>
+  <include file="$(find turtlebot_rplidar)/launch/includes/kobuki_rplidar.launch.xml"/>
   
   <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
     <param name="publish_frequency" type="double" value="30.0" />
