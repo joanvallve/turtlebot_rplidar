@@ -1,0 +1,17 @@
+<launch>
+	<arg name="gui" default="false"/>
+	<arg name="world_file" default="$(find turtlebot_rplidar)/worlds/laberint.world"/>
+	<arg name="move_base" default="false"/>
+
+	<!--GAZEBO-->
+	<include file="$(find turtlebot_rplidar)/launch/turtlebot_gazebo.launch">
+		<arg name="gui" value="$(arg gui)"/>
+		<arg name="world_file" value="$(arg world_file)"/>
+	</include>
+	
+	<!--GMAPPING-->
+	<include file="$(find turtlebot_rplidar)/launch/gmapping.launch">
+		<arg name="move_base" value="$(arg move_base)"/>
+	</include>
+	
+</launch>

@@ -1,0 +1,15 @@
+<launch>
+	<arg name="move_base" default="false"/>
+  	<arg name="rplidar_port" default="0"/>
+
+	<!--BRINGUP-->
+	<include file="$(find turtlebot_bringup)/launch/minimal.launch"/>
+	<include file="$(find rplidar_ros)/launch/rplidar.launch">
+		<arg name="port" value="$(arg rplidar_port)"/>
+	</include>
+	
+	<!--GMAPPING-->
+	<include file="$(find turtlebot_rplidar)/launch/gmapping.launch">
+		<arg name="move_base" value="$(arg move_base)"/>
+	</include>
+</launch>

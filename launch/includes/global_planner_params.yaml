@@ -1,0 +1,14 @@
+NavfnROS:
+  allow_unknown: True
+  
+local_costmap:
+  obstacle_layer:
+    scan:
+      min_obstacle_height: -1
+      max_obstacle_height: 1
+      
+global_costmap:
+  global_frame: /map
+  robot_base_frame: base_link
+  update_frequency: 5.0
+  static_map: false
