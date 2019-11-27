@@ -24,7 +24,7 @@
       </inertial>
     </link>
     <joint name="rplidar_joint" type="fixed">
-      <origin xyz="0.08 0 0.430" rpy="0 0 0"/>
+      <origin xyz="-0.01 -0.015 0.4" rpy="0 0 0"/><!--0.08 0 0.430-->
       <parent link="${parent}"/>
       <child link="rplidar_link"/>
      </joint>
