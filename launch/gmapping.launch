@@ -4,6 +4,13 @@
    	<!-- Gmapping -->
   	<include file="$(find turtlebot_navigation)/launch/includes/gmapping/gmapping.launch.xml">
     	<arg name="scan_topic" value="scan" />
+    	
+		<param name="throttle_scans" value="3"/><!--1-->
+		<param name="linearUpdate" value="0.5"/><!--1-->
+		<param name="angularUpdate" value="0.1"/><!--0.2-->
+		<param name="temporalUpdate" value="5"/><!-- -1-->
+		<param name="map_update_interval" value="2"/><!--5-->
+		<param name="particles" value="50"/><!--30-->
   	</include>
 
   	<!-- Move base -->
