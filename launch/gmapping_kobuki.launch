@@ -4,7 +4,7 @@
 
 	<!--BRINGUP-->
 	<include file="$(find turtlebot_bringup)/launch/minimal.launch"/>
-	<include file="$(find rplidar_ros)/launch/rplidar.launch">
+	<include file="$(find turtlebot_rplidar)/launch/rplidar.launch">
 		<arg name="port" value="$(arg rplidar_port)"/>
 	</include>
 	
