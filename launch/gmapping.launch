@@ -48,6 +48,6 @@
 
   	<!-- Move base -->
   	<group if="$(arg move_base)">
-		<include file="$(find turtlebot_rplidar)/launch/move_base.launch">
+		<include file="$(find turtlebot_rplidar)/launch/move_base.launch"\>
 	</group>
 </launch>
